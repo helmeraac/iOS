@@ -9,8 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var hamburguesa: UILabel!
+    @IBOutlet weak var pais: UILabel!
+    
+    let paisSeleccionado = ColeccionDePaises()
+    let hamburguesaSeleccionada = ColeccionDeHamburguesa()
 
+    @IBAction func cambiarPaisYHamburguesa() {
+        pais.text = paisSeleccionado.obtenPais()
+        hamburguesa.text = hamburguesaSeleccionada.obtenHamburguesa()
+        
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
